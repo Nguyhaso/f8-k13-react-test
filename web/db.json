@@ -1,0 +1,22 @@
+{
+  "product": [
+    {
+      "id": "4",
+      "name": "kem danh rang",
+      "price": 600,
+      "remaining": 34
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "quantity": 2,
+      "amount": 1600
+    },
+    {
+      "id": "2",
+      "quantity": 3,
+      "amount": 3000
+    }
+  ]
+}

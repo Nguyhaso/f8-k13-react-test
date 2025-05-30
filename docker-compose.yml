@@ -1,0 +1,14 @@
+services:
+  web:
+    container_name: f8-k13-react-test
+    image: node:20.10.0
+    working_dir: /app/web
+    env_file:
+      - .env
+    volumes:
+      - './web:/app/web'
+    ports:
+      - '4000:4000'
+      - '3000:3000'
+    command: ['npm', 'run', 'start']
+
