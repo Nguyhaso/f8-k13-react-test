@@ -31,7 +31,7 @@ const RenderActionBtn = (
 }
 
 
-function FTableComponent({headers, rows, onUpdate, width}: FTable) {
+function FTableComponent({headers, rows, onUpdate, width, onDelete}: FTable) {
   console.log(1234567)
 
   // const rows = []
