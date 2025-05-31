@@ -5,7 +5,7 @@ export interface Header {
 }
 
 interface Master {
-  id?: number
+  id?: any
   name: string
 }
 

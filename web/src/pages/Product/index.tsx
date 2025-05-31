@@ -16,7 +16,7 @@ const headers: Header[] = [
 export default () => {
   const [isOpenDialog, setIsOpenDialog] = useState<boolean>(false)
   const defaultProduct={
-    id: 0,
+    id: '',
     name: '',
     price: 0,
     remaining: 0,
@@ -40,11 +40,11 @@ export default () => {
   const onSave = async () => {
     try {
       //check if id existed or new create
-      if (curProduct.id === 0) {
-        const newId = products.length > 0 ? Math.max(...products.map(e => e.id)) + 1 : 1
+      if (curProduct.id === '') {
+        const newId = products.length > 0 ? Math.max(...products.map(e => Number(e.id))) + 1 : 1
         // create new product
         await postMethod(`/product`,{...curProduct, id: newId})
-        setProducts([...products, {...curProduct, id: newId}])
+        setProducts([...products, {...curProduct, id: String(newId)}])
       } else {
         //update existing employee
         await putMethod(`product/${curProduct.id}`, curProduct)

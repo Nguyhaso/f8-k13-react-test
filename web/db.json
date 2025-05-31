@@ -19,16 +19,22 @@
       "remaining": "201"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "ahihi",
       "price": "0111",
       "remaining": "1110"
     },
     {
-      "id": 5,
-      "name": "",
-      "price": 0,
-      "remaining": 0
+      "id": "5",
+      "name": "asdads",
+      "price": "01",
+      "remaining": "01"
+    },
+    {
+      "id": 6,
+      "name": "asdasd",
+      "price": "01000",
+      "remaining": "011"
     }
   ],
   "orders": [
