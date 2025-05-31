@@ -3,10 +3,7 @@ import {Collapse, Drawer, List, ListItemButton, ListItemIcon, ListItemText, List
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import HorizontalSplitOutlinedIcon from '@mui/icons-material/HorizontalSplitOutlined';
-import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
-import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 
 import {useState} from "react";
 import './style.css'
@@ -37,7 +34,7 @@ export default function ({isOpen, setIsOpen}: FDrawer) {
   return (
     <div>
       <Drawer open={isOpen} onClose={toggleDrawer(false)}>
-        <h2 className={'pa-10'}>F8 Management</h2>
+        <h2 className={'pa-10'}>React test</h2>
 
         <List
           className={'pa-10'}
@@ -46,7 +43,7 @@ export default function ({isOpen, setIsOpen}: FDrawer) {
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader component="div" id="nested-list-subheader">
-              Nested List Items
+              Link
             </ListSubheader>
           }
         >
@@ -59,12 +56,7 @@ export default function ({isOpen, setIsOpen}: FDrawer) {
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton  sx={{ pl: 4 }} onClick={() => goTo('/employee/')}>
-                <ListItemIcon>
-                  <PeopleAltOutlinedIcon />
-                </ListItemIcon>
-                <ListItemText primary="Employees" />
-              </ListItemButton>
+
               <ListItemButton  sx={{ pl: 4 }} onClick={() => goTo('/product/')}>
                 <ListItemIcon>
                   <HorizontalSplitOutlinedIcon />
@@ -72,19 +64,9 @@ export default function ({isOpen, setIsOpen}: FDrawer) {
                 <ListItemText primary="Products" />
               </ListItemButton>
 
-              <ListItemButton  sx={{ pl: 4 }} onClick={() => goTo('/color/')}>
-                <ListItemIcon>
-                  <ColorLensOutlinedIcon />
-                </ListItemIcon>
-                <ListItemText primary="Color" />
-              </ListItemButton>
 
-              <ListItemButton  sx={{ pl: 4 }} onClick={() => goTo('/customer/')}>
-                <ListItemIcon>
-                  <GroupOutlinedIcon />
-                </ListItemIcon>
-                <ListItemText primary="Customer" />
-              </ListItemButton>
+
+
             </List>
           </Collapse>
         </List>
